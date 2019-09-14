@@ -21,6 +21,7 @@ public class Main {
         } else {
             cashback = result;
         }
+
         System.out.println(cashback);
     }
 }
