@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         int amountInRegular = 100;
         int amountInHigh = 1000;
-        int amountInSpecial = 10_000;
+        int amountInSpecial = 1_000;
 
         int percentInRegular = 1;
         int percentInHigh = 5;
@@ -10,10 +10,16 @@ public class Main {
 
         int result = (
                 amountInRegular * percentInRegular +
-                amountInHigh * percentInHigh +
-                amountInSpecial * percentInSpecial
+                        amountInHigh * percentInHigh +
+                        amountInSpecial * percentInSpecial
         ) / 100;
-        System.out.println(result);
 
+        int cashback;
+        if (result > 3_000) {
+            cashback = 3_000;
+        } else {
+            cashback = result;
+        }
+        System.out.println(cashback);
     }
 }
